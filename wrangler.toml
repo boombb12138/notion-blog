@@ -1,14 +1,14 @@
-name = "blog"
+name = "notion-blog"
 main = "build/worker/shim.mjs"
 compatibility_date = "2023-03-22"
-routes = [{ pattern = "blog.kali-team.cn/*", zone_id = "28eeca2e15ad32083050e97611262653" }]
+routes = [{ pattern = "naomi.ip-ddns.com/*", zone_id = "0e2c0eb12489d30be4bad70ade90c8a0" }]
 usage_model = "bundled"
 [build]
 command = "cargo install -q worker-build && worker-build --release"
 
 [vars]
-MY_DOMAIN = "blog.kali-team.cn"
-NOTION_DOMAIN = "kali-team.notion.site"
+MY_DOMAIN = "naomi.ip-ddns.com"
+NOTION_DOMAIN = "boombb12138.notion.site"
 PAGE_MAP = '{"/":"edb6a939baab4424a25fd295b3c51312","/links":"9c74faba0b14441a93c2f94a40da3f79","/donate":"eb55bc48f7fb42bfaef8473d2b7b63aa","/about":"7a0e2b5d0137452cb7299f9000970caa"}'
 COMMENT_MAP = '{"data-repo":"cn-kali-team/notion-blog","data-repo-id":"R_kgDOI1wUgQ","data-category-id":"DIC_kwDOI1wUgc4CZK9O","data-mapping":"title","data-input-position":"top","data-theme":"preferred_color_scheme","data-lang":"zh-CN"}'
 PAGE_TITLE = "Kali-Team"
