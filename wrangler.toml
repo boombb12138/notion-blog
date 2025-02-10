@@ -1,4 +1,4 @@
-name = "notion-blog"
+name = "crimson-night-25af"
 main = "build/worker/shim.mjs"
 compatibility_date = "2023-03-22"
 routes = [{ pattern = "naomi.ip-ddns.com/*", zone_id = "0e2c0eb12489d30be4bad70ade90c8a0" }]
