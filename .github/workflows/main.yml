@@ -12,15 +12,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      # 添加 Rust 环境
+      # 安装 Rust 工具链
       - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          
+        uses: dtolnay/rust-toolchain@stable
+      
+      # 安装 worker-build
+      - name: Install worker-build
+        run: cargo install worker-build
+      
+      # 部署
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}  # 添加 account ID
-          command: deploy  # 明确指定 deploy 命令
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
